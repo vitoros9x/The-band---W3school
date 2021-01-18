@@ -16,15 +16,13 @@ function carousel() {
 }
 
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
-    if (!$(".header").hasClass("fixed")) {
-      $(".header").stop().addClass("fixed").css("top", "-50px").animate(
+  if ($(this).scrollTop() > 200) {
+      $(".header").addClass("fixed").css("top", "-50px").animate(
         {
           top: "0px",
         },
         1000
       );
-    }
   } else {
     $(".header").removeClass("fixed");
   }
